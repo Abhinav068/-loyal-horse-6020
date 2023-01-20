@@ -1,0 +1,10 @@
+body {
+padding: 1%;
+}
+header>*{
+    display: flex;
+}
+header>:last-child{
+    border: 1px blue solid;
+    margin: -1%;
+}
