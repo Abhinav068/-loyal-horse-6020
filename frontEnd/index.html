@@ -7,6 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="stylesheet" href="./styles/homepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        #main>div:nth-child(1)>div {
+            display: flex;
+            justify-content: center;
+        }
+
+        #main>div:nth-child(1)>div>* {
+            width: 25%;
+        }
+    </style>
 </head>
 
 <body>
@@ -51,8 +62,48 @@
 
     </header>
 
+    <!-- mid section -->
+    <div id="main">
+        <div>
+            <p>Top Stories</p>
+            <div>
+                <div><img
+                        src="https://i.gadgets360cdn.com/large/twitter_community_notes_twitter_thumb_1670846617848.jpg?downsize=316:*&output-quality=80&output-format=webp"
+                        alt="img1">
+                    <p>Twitter App Update Will Stop Showing the 'For You' Tab by Default</p>
+                </div>
+                <div><img
+                        src="https://i.gadgets360cdn.com/large/galaxy_a33_samsung_small_1673434220174.jpg?downsize=316:*&output-quality=80&output-format=webp"
+                        alt="img2">
+                    <p>Samsung Galaxy A34 5G May Feature 25W Charging Support</p>
+                </div>
+                <div><img
+                        src="https://i.gadgets360cdn.com/large/Whatsapp_search_by_date_ios_small_1674223188119.jpg?downsize=316:*&output-quality=80&output-format=webp"
+                        alt="img3">
+                    <p>
+                        iPhone Users Can Now Search Messages by Date on WhatsApp
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <div>
+            <div id="left">
+                <p>Trending</p>
+            </div>
+            <div id="middle"></div>
+            <div id="right"></div>
+        </div>
+
+
+    </div>
+
+
+    <!-- footer -->
     <footer>
-        <div></div>
+        <div>
+            <img src="./images/logo.png" alt="logo">
+        </div>
         <div>
             <p>About us</p>
             <p>Sitemaps</p>
@@ -70,27 +121,35 @@
             <P>Complaint Redressal</P>
         </div>
         <div>
-            <div>Gadgets 360 is available in</div>
+            <div>
+                Gadgets 360 is available in
+            </div>
             <div>
                 <p>English</p>
                 <p>Hindi</p>
             </div>
             <div>Follow Us</div>
             <div>
-                <p>logo1</p>
-                <p>logo2</p>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-google"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-youtube"></a>
             </div>
         </div>
         <div>
             <div>Download Our Apps</div>
             <div>
-                <p>logo1</p>
-                <p>logo2
-
-                </p>
+                <a href="#"><img src="https://www.gadgets360.com/static/mobile/images/playstore_badge.png"
+                        alt="app1"></a>
+                <a href="#"><img id="appstore" src="https://www.gadgets360.com/static/mobile/images/appstore_badge.png"
+                        alt="app1"> </a>
             </div>
             <div>Available in Hindi</div>
-            <div>logo3</div>
+            <div>
+                <img src="https://www.gadgets360.com/static/mobile/images/playstore_badge.png" alt="app1">
+            </div>
+
         </div>
 
     </footer>
