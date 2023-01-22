@@ -107,6 +107,12 @@ footer>div>p:first-child {
     margin-top: 0;
 }
 
+ footer > div > p{
+    cursor: pointer;
+}
+ footer > div > div > p{
+cursor: pointer;
+}
 body>footer>div:nth-child(4)>div:nth-child(2) * {
     color: rgb(185, 181, 181);
 }
