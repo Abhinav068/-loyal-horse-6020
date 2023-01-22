@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="./styles/homepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        #main>div:nth-child(1)>div {
+            display: flex;
+            justify-content: center;
+        }
+
+        #main>div:nth-child(1)>div>* {
+            width: 25%;
+        }
+
+        #main>div:nth-child(2) {
+            display: flex;
+            /* justify-content: space-between; */
+        }
+
+        #main>div:nth-child(1)>p {
+            font-size: x-large;
+            font-stretch: condensed;
+        }
+
+        #main>div:nth-child(1)>div>div:hover {
+            cursor: pointer;
+        }
+
+        #left {
+            width: 10%;
+            /* border: solid yellowgreen 1px; */
+            padding: 1%;
+            background-color: #f1f1f1;
+        }
+
+        #left:hover {
+            cursor: pointer;
+        }
+
+
+        #left img {
+            display: block;
+        }
+
+        #left>div:not(:first-child)>p {
+            font-size: small;
+            color: #595959;
+        }
+
+        #left>p {
+            font-size: large;
+            color: #da0000;
+            margin: 6% 0;
+        }
+
+        #middle {
+            width: 60%;
+            padding: 0 1%;
+            /* border: solid rgb(142, 156, 17) 1px; */
+        }
+
+       
+        .video {
+            position: relative;
+        }
+
+        .video>div {
+            position: absolute;
+            /* border: #da0000 solid 1px; */
+            background-color: rgba(0, 0, 0, .6);
+            color: white;
+            top: 47%;
+            left: 3%;
+            font-size: small;
+            padding: 3%;
+        }
+
+        
+
+
+        #right {
+            width: 25%;
+            /* border: solid rgb(156, 17, 110) 1px; */
+            padding: 1%;
+            background-color: #f7f7f7;
+        }
+
+        #right>* {
+            margin-bottom: 15%;
+        }
+
+        #right button {
+            background-color: #da0000;
+            border: none;
+            color: white;
+            border-radius: 2px;
+        }
+
+        button:hover {
+            cursor: pointer;
+            opacity: 0.7;
+        }
+
+        #right .fa {
+            /* padding: 10px; */
+            font-size: 30px;
+            width: 28px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+        }
+
+        #right .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+
+        #right .fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
+
+        #right .fa-google {
+            background: #dd4b39;
+            color: white;
+        }
+
+        #right .fa-linkedin {
+            background: #007bb5;
+            color: white;
+        }
+
+        #right .fa-youtube {
+            background: #bb0000;
+            color: white;
+        }
+
+        #right .fa:hover {
+            opacity: 0.7;
+        }
+
+        #right>div:nth-child(1)>* {
+            display: block;
+        }
+
+        #right>div:nth-child(3)>h4 {
+            margin: 0;
+            font-size: 15px;
+            background-color: #da0000;
+            padding: 2%;
+            font-stretch: condensed;
+            /* line-height: 38px; */
+            color: white;
+        }
+
+        #right>div:nth-child(3) a {
+            text-decoration: none;
+            display: block;
+            /* height: 90px; */
+            margin-bottom: 8px;
+            border-bottom: #e4e4e4 solid 1px;
+            padding: 3px 0;
+            line-height: 1.4;
+            font-size: 14px;
+            color: #595959;
+        }
+
+        #right>div:nth-child(3) a {
+            color: #454545;
+        }
+
+
+        #right input {
+            width: 70%;
+            height: 20px;
+            padding: 4px;
+            text-align: center;
+            font-size: 15px;
+        }
+
+        #right>div:nth-child(3)>div>div {
+            width: 46%;
+        }
+
+        #right>div:nth-child(3) a:hover {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="./images/logo.png" alt="logo">
+        </div>
+        <div>
+            <p>HOME</p>
+            <p>GUIDE</p>
+            <p>NEWS</p>
+            <p>FEATURES</p>
+            <p>OPINIONS</p>
+            <p>VIDEOS</p>
+            <p>PODCASTS</p>
+            <p>PRODUCT FINDER</p>
+            <p>COMPARE</p>
+            <p>BRANDS</p>
+            <p>RECHARGE</p>
+            <p>MORE</p>
+            <input type="text" placeholder="GADGET SEARCH" style="display: inline-block;height: 25px;margin: auto 0;">
+
+        </div>
+        <div>
+            <p>MOBILES</p>
+            <p>TELECOM</p>
+            <p>HOW TO</p>
+            <p>GAMING</p>
+            <p>ENTERTAINMENT</p>
+            <p>CRYPO</p>
+            <p>AUDIO</p>
+            <p>TV</p>
+            <p>PC/LAPTOPS</p>
+            <p>APPS</p>
+            <p>TABLETS</p>
+            <p>SCIENCE</p>
+            <p>WEARABLES</p>
+            <p>RECHARGE/BILL PAY</p>
+            <p>5G IN INDIA</p>
+            <p>HINDI</p>
+        </div>
+
+    </header>
+
+    <!-- mid section -->
+    <div id="main">
+        <div>
+            <!-- don't remove this tag. -->
+        </div>
+        <div>
+            <div id="left">
+                <p>TRENDING</p>
+                <div class="left">
+                    <img src="https://i.gadgets360cdn.com/large/Callrecording_small_1674211191246.jpg?downsize=130:*"
+                        alt="img1">
+                    <p>This ColorOS Android App Records Calls Without On-Call Voice Disclaimer</p>
+                </div>
+                <div class="left">
+                    <img src="https://i.gadgets360cdn.com/large/samsung_galaxy_unpacked_poster_small_1673411862969.jpg?downsize=130:*"
+                        alt="img2">
+                    <p>
+                        Samsung Galaxy S23 Series Specifications, Pricing Leaked Ahead of Launch
+                    </p>
+                </div>
+            </div>
+
+            <div id="middle">
+
+            </div>
+            <div id="right">
+                <!-- <p>Trending</p> -->
+                <div style="display: flex; justify-content: space-around;">
+                    <input type="text" placeholder="Enter email for our newsletter">
+                    <button>Subscribe</button>
+                </div>
+                <div>
+                    <h3 style="text-align: center;">Follow Us</h3>
+                    <div style="display: flex; justify-content: space-evenly;">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-google"></a>
+                        <a href="#" class="fa fa-linkedin"></a>
+                        <a href="#" class="fa fa-youtube"></a>
+                    </div>
+
+                </div>
+                <div>
+                    <h4>TRENDING GADGETS AND TOPICS</h4>
+                    <div style="display: flex; justify-content: space-between;">
+                        <div>
+                            <h3>Latest</h3>
+                            <a href="#">Vivo Vivo Y55s 5G (2023)</a>
+                            <a href="#">Tecno Spark Go (2023)</a>
+                        </div>
+                        <div>
+                            <h3>Popular</h3>
+                            <a href="#">Auto Expo 2023</a>
+                            <a href="#">Amazon Pay</a>
+                            <a href="#">Amazon Great Republic Day</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!-- footer -->
+    <footer>
+        <div>
+            <img src="./images/logo.png" alt="logo">
+        </div>
+        <div>
+            <p>About us</p>
+            <p>Sitemaps</p>
+            <p>Feedback</p>
+            <p>Archives</p>
+            <p>Contact Us</p>
+            <p>RSS</p>
+        </div>
+        <div>
+            <P>Advertise</P>
+            <P>Carrier</P>
+            <P>Privacy Policy</P>
+            <P>Ethics</P>
+            <P>Terms & Conditions</P>
+            <P>Complaint Redressal</P>
+        </div>
+        <div>
+            <div>
+                Gadgets 360 is available in
+            </div>
+            <div>
+                <p>English</p>
+                <p>Hindi</p>
+            </div>
+            <div>Follow Us</div>
+            <div>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-google"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-youtube"></a>
+            </div>
+        </div>
+        <div>
+            <div>Download Our Apps</div>
+            <div>
+                <a href="#"><img src="https://www.gadgets360.com/static/mobile/images/playstore_badge.png"
+                        alt="app1"></a>
+                <a href="#"><img id="appstore" src="https://www.gadgets360.com/static/mobile/images/appstore_badge.png"
+                        alt="app1"> </a>
+            </div>
+            <div>Available in Hindi</div>
+            <div>
+                <img src="https://www.gadgets360.com/static/mobile/images/playstore_badge.png" alt="app1">
+            </div>
+
+        </div>
+
+    </footer>
+</body>
+
+</html>
+
+<script src="./sources/homepage.js"></script>
