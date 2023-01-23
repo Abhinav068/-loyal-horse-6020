@@ -18,7 +18,8 @@
 
 </html>
 <script>
-    const url = 'http://localhost:5100'
+    const url = 'https://spotless-moth-housecoat.cyclic.app'
+    // const url = "http://localhost:5100";
     let obj;
     document.getElementById('form').addEventListener('submit', (e) => {
         e.preventDefault();
@@ -26,20 +27,28 @@
             email: form.email.value,
             password: form.pass.value
         };
-        console.log(obj);
+        // console.log(obj);
         fetch(`${url}/users/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(obj)
-        }).then(data => data.json()).then(data => {
+        }).then(data => {
             // console.log(data);
-            localStorage.setItem('admin_token', data.token)
-            window.location.href='admin.html';
+            if (data.ok){
+                return data.json();
+            }
+            else{
+                alert('invalid credentials');
+            }
+        }).then(data => {
+            // console.log(data);
+            localStorage.setItem('admin_token', data.token);
+            window.location.href = 'admin.html';
         }).catch(err => {
             // console.log(err);
-            alert(err.msg)
+            console.log(err)
         });
     })
 
