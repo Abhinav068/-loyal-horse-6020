@@ -6,30 +6,130 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ALL Products</title>
+    <style>
+        #allProducts>* {
+            margin: 20px;
+        }
+
+        #allProducts>div>* {
+            margin: 0 10px;
+        }
+    </style>
 </head>
 
 <body>
+    <div>
+        <button>Add New Products</button>
+    </div>
+    <div id="allProducts">
+        <div style="display: flex;">
+            <div>
+                <img src="https://i.gadgets360cdn.com/products/small/redmi-10-2022-240x180-1644816688.jpg?downsize=120:*"
+                    alt="">
+            </div>
+            <div>
+                <span>Name : </span> <span> ${el.name}</span> <br>
+                <span>Brand : </span> <span> phone1</span> <br>
+                <span>Category : </span> <span> phone1</span> <br>
+                <span>Front Camera : </span> <span> phone1</span> <br>
+                <span>Rear Camera : </span> <span> phone1</span> <br>
+                <span>Processor : </span> <span> phone1</span> <br>
+                <span>Ram : </span> <span> phone1</span> <br>
+                <span>Price : </span> <span> phone1</span> <br>
+                <span>Release Date : </span> <span> phone1</span> <br>
+                <span>Link : </span> <span> phone1</span> <br>
+                <button>Update</button> <button>Delete</button>
 
+            </div>
+
+        </div>
+
+        <div style="display: flex;">
+            <div>
+                <img src="https://i.gadgets360cdn.com/products/small/oppo-a78-5g-db-240x180-1673589076.jpg?downsize=120:*"
+                    alt="">
+            </div>
+            <div>
+                <span>Name : </span> <span> phone1</span> <br>
+                <span>Brand : </span> <span> phone1</span> <br>
+                <span>Category : </span> <span> phone1</span> <br>
+                <span>Front Camera : </span> <span> phone1</span> <br>
+                <span>Rear Camera : </span> <span> phone1</span> <br>
+                <span>Processor : </span> <span> phone1</span> <br>
+                <span>Ram : </span> <span> phone1</span> <br>
+                <span>Price : </span> <span> phone1</span> <br>
+                <span>Release Date : </span> <span> phone1</span> <br>
+                <span>Link : </span> <span> phone1</span> <br>
+                <button>Update</button> <button>Delete</button>
+
+            </div>
+
+        </div>
+    </div>
 </body>
 
 </html>
 
 <script>
-
-const url = 'http://localhost:5100';
+    // const url = 'http://localhost:5100';
+    const url = 'https://spotless-moth-housecoat.cyclic.app'
     fetch(`${url}/products`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
             'Authorization': localStorage.getItem('admin_token')
         },
+    }).then(res => res.json()).then(res => {
+        console.log(res.data);
+        appendData(res.data);
 
-    }).then(data => data.json()).then(data => {
-        console.log(data);
+        document.querySelectorAll('.update').addEventListener('click', () => {
+            console.log('updated');
+        })
 
-
+        document.querySelectorAll('.delete').addEventListener('click', () => {
+            console.log('deleted');
+        })
     }).catch(err => {
         // console.log(err);
-        alert(err.msg)
+        // alert(err.msg)
     });
+
+    function appendData(dataArray) {
+        // console.log(dataArray);
+        document.getElementById('allProducts').innerHTML = dataArray.map((el) => {
+            // console.log(el);
+            return `
+            <div style="display: flex;">
+            <div>
+                <img src="https://i.gadgets360cdn.com/products/small/redmi-10-2022-240x180-1644816688.jpg?downsize=120:*"
+                    alt="img1">
+            </div>
+            <div>
+                <span>Name : </span> <span> ${el.name}</span> <br>
+                <span>Brand : </span> <span> ${el.brand}</span> <br>
+                <span>Category : </span> <span> ${el.category}</span> <br>
+                <span>Front Camera : </span> <span> ${el.frontCamera}</span> <br>
+                <span>Rear Camera : </span> <span> ${el.rearCamera}</span> <br>
+                <span>Processor : </span> <span> ${el.processor}</span> <br>
+                <span>Ram : </span> <span> ${el.name}</span> <br>
+                <span>Price : </span> <span> ${el.price}</span> <br>
+                <span>Release Date : </span> <span> ${el.releaseDate}</span> <br>
+                <span>Link : </span> <span> ${el.pricelink}</span> <br>
+                <button data-id="${el._id}" class="update">Update</button> <button data-id="${el._id}" class="delete">Delete</button>
+
+            </div>
+
+        </div>`
+        }).join('')
+
+
+        // document.querySelectorAll('.update').addEventListener('click', () => {
+        //     console.log('updated');
+        // })
+
+        // document.querySelectorAll('.delete').addEventListener('click', () => {
+        //     console.log('deleted');
+        // })
+    }
 </script>
