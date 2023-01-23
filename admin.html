@@ -38,7 +38,7 @@
                 <span>Price : </span> <span> phone1</span> <br>
                 <span>Release Date : </span> <span> phone1</span> <br>
                 <span>Link : </span> <span> phone1</span> <br>
-                <button>Update</button> <button>Delete</button>
+                <button class="update">Update</button> <button class="delete">Delete</button>
 
             </div>
 
@@ -60,7 +60,7 @@
                 <span>Price : </span> <span> phone1</span> <br>
                 <span>Release Date : </span> <span> phone1</span> <br>
                 <span>Link : </span> <span> phone1</span> <br>
-                <button>Update</button> <button>Delete</button>
+                <button class="update">Update</button> <button class="delete">Delete</button>
 
             </div>
 
@@ -82,54 +82,52 @@
     }).then(res => res.json()).then(res => {
         console.log(res.data);
         appendData(res.data);
-
-        document.querySelectorAll('.update').addEventListener('click', () => {
-            console.log('updated');
-        })
-
-        document.querySelectorAll('.delete').addEventListener('click', () => {
-            console.log('deleted');
-        })
     }).catch(err => {
         // console.log(err);
         // alert(err.msg)
     });
 
     function appendData(dataArray) {
-        // console.log(dataArray);
-        document.getElementById('allProducts').innerHTML = dataArray.map((el) => {
-            // console.log(el);
-            return `
-            <div style="display: flex;">
-            <div>
-                <img src="https://i.gadgets360cdn.com/products/small/redmi-10-2022-240x180-1644816688.jpg?downsize=120:*"
-                    alt="img1">
-            </div>
-            <div>
-                <span>Name : </span> <span> ${el.name}</span> <br>
-                <span>Brand : </span> <span> ${el.brand}</span> <br>
-                <span>Category : </span> <span> ${el.category}</span> <br>
-                <span>Front Camera : </span> <span> ${el.frontCamera}</span> <br>
-                <span>Rear Camera : </span> <span> ${el.rearCamera}</span> <br>
-                <span>Processor : </span> <span> ${el.processor}</span> <br>
-                <span>Ram : </span> <span> ${el.name}</span> <br>
-                <span>Price : </span> <span> ${el.price}</span> <br>
-                <span>Release Date : </span> <span> ${el.releaseDate}</span> <br>
-                <span>Link : </span> <span> ${el.pricelink}</span> <br>
-                <button data-id="${el._id}" class="update">Update</button> <button data-id="${el._id}" class="delete">Delete</button>
+        console.log(dataArray);
+        // document.getElementById('allProducts').innerHTML = dataArray.map((el) => {
+        //     // console.log(el);
+        //     return `
+        //     <div style="display: flex;">
+        //     <div>
+        //         <img src="https://i.gadgets360cdn.com/products/small/redmi-10-2022-240x180-1644816688.jpg?downsize=120:*"
+        //             alt="img1">
+        //     </div>
+        //     <div>
+        //         <span>Name : </span> <span> ${el.name}</span> <br>
+        //         <span>Brand : </span> <span> ${el.brand}</span> <br>
+        //         <span>Category : </span> <span> ${el.category}</span> <br>
+        //         <span>Front Camera : </span> <span> ${el.frontCamera}</span> <br>
+        //         <span>Rear Camera : </span> <span> ${el.rearCamera}</span> <br>
+        //         <span>Processor : </span> <span> ${el.processor}</span> <br>
+        //         <span>Ram : </span> <span> ${el.name}</span> <br>
+        //         <span>Price : </span> <span> ${el.price}</span> <br>
+        //         <span>Release Date : </span> <span> ${el.releaseDate}</span> <br>
+        //         <span>Link : </span> <span> ${el.pricelink}</span> <br>
+        //         <button data-id="${el._id}" class="update">Update</button> <button data-id="${el._id}" class="delete">Delete</button>
 
-            </div>
+        //     </div>
 
-        </div>`
-        }).join('')
+        // </div>`
+        // }).join('')
 
 
-        // document.querySelectorAll('.update').addEventListener('click', () => {
-        //     console.log('updated');
-        // })
+        document.querySelectorAll('.update').forEach((el) => {
+            el.addEventListener('click', () => {
+                console.log('updated');
+            })
+        })
 
-        // document.querySelectorAll('.delete').addEventListener('click', () => {
-        //     console.log('deleted');
-        // })
+        document.querySelectorAll('.delete').forEach((el) => {
+            el.addEventListener('click', () => {
+                console.log('deleted');
+            })
+        })
+        
+    
     }
 </script>

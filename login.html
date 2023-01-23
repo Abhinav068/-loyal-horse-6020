@@ -43,7 +43,7 @@
                 alert('invalid credentials');
             }
         }).then(data => {
-            // console.log(data);
+            console.log(data);
             localStorage.setItem('admin_token', data.token);
             window.location.href = 'admin.html';
         }).catch(err => {
