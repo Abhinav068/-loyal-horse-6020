@@ -74,6 +74,7 @@
     // const url = 'http://localhost:5100';
     const url = 'https://spotless-moth-housecoat.cyclic.app'
     fetch(`${url}/products`, {
+        mode: 'no-cors',
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',

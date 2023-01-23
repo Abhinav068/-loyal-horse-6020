@@ -30,6 +30,7 @@
         // console.log(obj);
         fetch(`${url}/users/login`, {
             method: 'POST',
+            mode: 'no-cors',
             headers: {
                 'Content-Type': 'application/json'
             },
